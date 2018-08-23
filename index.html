@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="./resources/main.js"></script>
+        <link rel="stylesheet" href="resources/main.css">
+    </head>
+
+    <body onpageshow="encodeURL()">
+        <h1>EZ Git.io</h1>
+        <main>
+            <textarea id="gitIoCode" placeholder="Vanity URL Term (will appear after the / in git.io/)" onkeyup="encodeURL()"></textarea>
+            <textarea id="githubURL" placeholder="Original GitHub URL" onkeyup="toggleRequestButton()"></textarea>
+
+            <div class="row">
+                <button class="centeredObject" id="checkCodeAvailable" disabled>Check availability</button>
+                <button class="centeredObject" id="requestGitIo" disabled>Request Vanity URL</button>
+            </div>
+
+            <br>
+            <div id="output">Please enter a Vanity URL term.</div>
+        </main>
+    </body>
+</html>
