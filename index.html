@@ -1,20 +1,23 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <title>EZ Git.io: make custom GitHub shortlinks!</title>
         <script src="//ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="./resources/main.js"></script>
         <link rel="stylesheet" href="resources/main.css">
     </head>
 
     <body onpageshow="encodeURL()">
-        <h1>EZ Git.io</h1>
-        <h2>A simple custom URL shortener for GitHub links.</h2>
+        <header>
+            <h1>EZ Git.io</h1>
+            <h2>A simple custom URL shortener for GitHub links.</h2>
+        </header>
         <main>
             <textarea id="gitIoCode" placeholder="Vanity URL Term (will appear after the / in git.io/)" onkeyup="encodeURL()"></textarea>
             <textarea id="githubURL" placeholder="Original GitHub URL" onkeyup="toggleRequestButton()"></textarea>
 
             <div class="row">
-                <button class="centeredObject" id="checkCodeAvailable" disabled>Check availability</button>
+                <button class="centeredObject" id="checkCodeAvailable" disabled>Check Availability</button>
                 <button class="centeredObject" id="requestGitIo" disabled>Request Vanity URL</button>
             </div>
 
@@ -23,6 +26,6 @@
         </main>
         <footer>Formatting and CSS borrows heavily from <a href="https://mholt.github.io/curl-to-go/">Matt Holt's Project</a>.
             <br>
-            © 2018 Nick Marcopoli - <a href="https://git.io/EZGitVanity">View Source on GitHub</a></footer>
+            &copy; 2018 <a href="https://nick.marcopo.li/">Nick Marcopoli</a> - <a href="https://git.io/EZGitVanity">View Source on GitHub</a></footer>
     </body>
 </html>
