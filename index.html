@@ -8,6 +8,7 @@
 
     <body onpageshow="encodeURL()">
         <h1>EZ Git.io</h1>
+        <h2>A simple custom URL shortener for GitHub links.</h2>
         <main>
             <textarea id="gitIoCode" placeholder="Vanity URL Term (will appear after the / in git.io/)" onkeyup="encodeURL()"></textarea>
             <textarea id="githubURL" placeholder="Original GitHub URL" onkeyup="toggleRequestButton()"></textarea>
@@ -20,5 +21,8 @@
             <br>
             <div id="output">Please enter a Vanity URL term.</div>
         </main>
+        <footer>Formatting and CSS borrows heavily from <a href="https://mholt.github.io/curl-to-go/">Matt Holt's Project</a>.
+            <br>
+            © 2018 Nick Marcopoli - <a href="https://git.io/EZGitVanity">View Source on GitHub</a></footer>
     </body>
 </html>
