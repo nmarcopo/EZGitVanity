@@ -95,6 +95,10 @@ function createShortLink($url, $code){
     // return success or error message
     if($header == "https://git.io/$code"){
         return "Vanity URL has been created for <a href=$url>$url</a> at <a href=$header>$header</a>.";
+    }else if(substr($header, 0, 7) === "Invalid"){
+        return "Please enter your URL as \"http[s]://...\"";
+    }else if(substr($header, 0, 4) === "Must"){
+        return "Your URL must be a GitHub URL. Other URLs cannot be shortened with git.io.";
     }else{
         return "Vanity URL already exists for <a href=$url>$url</a> (<a href=$header>$header</a>) - you cannot create more than one vanity URL for the same page.<br>Tip: add an empty query (a question mark ('?')) to create a vanity URL for this page.<br>i.e. copy and paste this link into the GitHub URL field and try again:<br><a href=\"$url?\">$url?</a>";
     }
