@@ -1,31 +1,56 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>EZ Git.io: make custom GitHub shortlinks!</title>
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <script src="./resources/main.js"></script>
-        <link rel="stylesheet" href="resources/main.css">
-    </head>
+<html lang="en">
 
-    <body onpageshow="encodeURL()">
-        <header>
-            <h1>EZ Git.io</h1>
-            <h2>A simple custom URL shortener for GitHub links.</h2>
-        </header>
-        <main>
-            <textarea id="gitIoCode" placeholder="Vanity URL Term (will appear after the / in git.io/)" onkeyup="encodeURL()"></textarea>
-            <textarea id="githubURL" placeholder="Original GitHub URL (https://github.com/...)" onkeyup="toggleRequestButton()"></textarea>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>EZ Git.io: make custom GitHub shortlinks!</title>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="./resources/main.js"></script>
+    <link rel="stylesheet" href="resources/bootstrap.min.css">
+</head>
 
-            <div class="row">
-                <button class="centeredObject" id="checkCodeAvailable" disabled>Check Availability</button>
-                <button class="centeredObject" id="requestGitIo" disabled>Request Vanity URL</button>
+<body onpageshow="encodeURL()">
+    <div class="container" style="max-width: 540px">
+        <div class="page-header">
+            <h1 class="mt-4">EZ Git.io</h1>
+            <p class="lead">A simple custom URL shortener for GitHub links.</p>
+        </div>
+        <div class="form-group">
+            <!--onkeyup means that I can't really use ctrl-a after something like "hello world"-->
+            <textarea class="form-control" id="gitIoCode"
+                placeholder="Vanity URL Term (will appear after the / in git.io/)" onkeyup="encodeURL()"></textarea>
+        </div>
+        <div class="form-group">
+            <textarea class="form-control" id="githubURL" placeholder="Original GitHub URL (https://github.com/...)"
+                onkeyup="toggleRequestButton()"></textarea>
+        </div>
+
+        <div class="row form-group">
+            <div class="col">
+                <button class="centeredObject btn btn-info btn-block" id="checkCodeAvailable" disabled>Check
+                    Availability</button>
             </div>
+            <div class="col">
+                <button class="centeredObject btn btn-info btn-block" id="requestGitIo" disabled>Request Shortlink</button>
+            </div>
+        </div>
 
-            <br>
-            <div id="output">Please enter a Vanity URL term.</div>
-        </main>
-        <footer>Formatting and CSS borrows heavily from <a href="https://mholt.github.io/curl-to-go/">Matt Holt's Project</a>.
-            <br>
-            &copy; 2018 <a href="https://nick.marcopo.li/">Nick Marcopoli</a> - <a href="https://git.io/EZGitVanity">View Source on GitHub</a></footer>
-    </body>
+        <div class="card border-secondary mb-3 bg-light">
+            <div class="card-body">
+                <p class="card-text text-muted" id="output">Some quick example text to build on the card title
+                    and make up the bulk of the card's content.</p>
+            </div>
+        </div>
+    </div>
+    </div>
+    <footer class="footer mb-3">
+        <div class="container text-center">
+            <span class="text-muted">
+                &copy; 2018 <a href="https://nick.marcopo.li/">Nick Marcopoli</a> - <a
+                    href="https://git.io/EZGitVanity">View Source on GitHub</a>
+            </span>
+        </div>
+    </footer>
+</body>
+
 </html>
