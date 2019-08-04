@@ -1,14 +1,6 @@
 // Assign common html objects to vars
 var outputBlock = document.getElementById("output");
 
-// Function that executes for first button
-document.getElementById("checkCodeAvailable").addEventListener('click', function() {
-    //properly encode URL
-    // call php
-    let gitIoCode = document.getElementById("gitIoCode").value;
-    outputBlock.innerHTML = "Check to make sure that <a href=https://git.io/" + gitIoCode + " target=blank>https://git.io/" + gitIoCode + "</a> contains the message:<br><code>No url found for " + gitIoCode + "</code><br>If it does, then you can place a request! Otherwise, please choose another vanity URL term.";
-});
-
 // Function for second button
 document.getElementById("requestGitIo").addEventListener('click', function () {
     let githubURL = document.getElementById("githubURL").value
