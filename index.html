@@ -3,9 +3,8 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>EZ Git.io: make custom GitHub shortlinks!</title>
+    <title>EZ Git.io: custom GitHub shortlinks!</title>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="./resources/main.js"></script>
     <link rel="stylesheet" href="resources/bootstrap.min.css">
 </head>
 
@@ -16,13 +15,12 @@
             <p class="lead">A simple custom URL shortener for GitHub links.</p>
         </div>
         <div class="form-group">
-            <!--onkeyup means that I can't really use ctrl-a after something like "hello world"-->
             <textarea class="form-control" id="gitIoCode"
-                placeholder="Vanity URL Term (will appear after the / in git.io/)" onkeyup="encodeURL()"></textarea>
+                placeholder="Vanity URL Term (will appear after the / in git.io/)" oninput="encodeURL()"></textarea>
         </div>
         <div class="form-group">
             <textarea class="form-control" id="githubURL" placeholder="Original GitHub URL (https://github.com/...)"
-                onkeyup="toggleRequestButton()"></textarea>
+                oninput="toggleRequestButton()"></textarea>
         </div>
 
         <div class="row form-group">
@@ -37,8 +35,7 @@
 
         <div class="card border-secondary mb-3 bg-light">
             <div class="card-body">
-                <p class="card-text text-muted" id="output">Some quick example text to build on the card title
-                    and make up the bulk of the card's content.</p>
+                <p class="card-text text-muted" id="output">Please enter a Vanity URL term.</p>
             </div>
         </div>
     </div>
@@ -52,5 +49,8 @@
         </div>
     </footer>
 </body>
+
+<!--Script at bottom for faster loading-->
+<script src="./resources/main.js"></script>
 
 </html>
