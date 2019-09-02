@@ -4,6 +4,7 @@ var outputBlock = document.getElementById("output");
 // Function for second button
 document.getElementById("requestGitIo").addEventListener('click', function () {
     let githubURL = document.getElementById("githubURL").value
+    // Regex to detect incorrectly formatted url
     if(!(/https?:\/\/.+\..+/g.test(githubURL))){
         // Sadly we need jQuery to trigger the modal
         $("#invalidModal").modal('show')
